@@ -1,0 +1,425 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.417168398464426,
+          20.104352309716425
+        ]
+      },
+      "properties": {
+        "junction_id": 189,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -49.355517709492055,
+          131.23581619767953
+        ]
+      },
+      "properties": {
+        "junction_id": 468,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.88673576941857,
+          67.59459028139219
+        ]
+      },
+      "properties": {
+        "junction_id": 895,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.81480699426987,
+          64.93001089657054
+        ]
+      },
+      "properties": {
+        "junction_id": 134,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.34667518615723,
+          -59.6684109715053
+        ]
+      },
+      "properties": {
+        "junction_id": 23,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.46647555033366,
+          24.28104387919108
+        ]
+      },
+      "properties": {
+        "junction_id": 841,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.39862368522434,
+          20.890049663705565
+        ]
+      },
+      "properties": {
+        "junction_id": 719,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.65061370186184,
+          20.398805488840395
+        ]
+      },
+      "properties": {
+        "junction_id": 532,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.32519761906114,
+          68.71553611755371
+        ]
+      },
+      "properties": {
+        "junction_id": 664,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.34667518615723,
+            -59.6684109715053
+          ],
+          [
+            -47.417168398464426,
+            20.104352309716425
+          ]
+        ]
+      },
+      "properties": {
+        "from": 23,
+        "to": 189,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.34667518615723,
+            -59.6684109715053
+          ],
+          [
+            100.65061370186184,
+            20.398805488840395
+          ]
+        ]
+      },
+      "properties": {
+        "from": 23,
+        "to": 532,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.34667518615723,
+            -59.6684109715053
+          ],
+          [
+            -105.39862368522434,
+            20.890049663705565
+          ]
+        ]
+      },
+      "properties": {
+        "from": 23,
+        "to": 719,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            42.81480699426987,
+            64.93001089657054
+          ],
+          [
+            101.32519761906114,
+            68.71553611755371
+          ]
+        ]
+      },
+      "properties": {
+        "from": 134,
+        "to": 664,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            42.81480699426987,
+            64.93001089657054
+          ],
+          [
+            41.46647555033366,
+            24.28104387919108
+          ]
+        ]
+      },
+      "properties": {
+        "from": 134,
+        "to": 841,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            42.81480699426987,
+            64.93001089657054
+          ],
+          [
+            -43.88673576941857,
+            67.59459028139219
+          ]
+        ]
+      },
+      "properties": {
+        "from": 134,
+        "to": 895,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.417168398464426,
+            20.104352309716425
+          ],
+          [
+            -105.39862368522434,
+            20.890049663705565
+          ]
+        ]
+      },
+      "properties": {
+        "from": 189,
+        "to": 719,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.417168398464426,
+            20.104352309716425
+          ],
+          [
+            41.46647555033366,
+            24.28104387919108
+          ]
+        ]
+      },
+      "properties": {
+        "from": 189,
+        "to": 841,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -47.417168398464426,
+            20.104352309716425
+          ],
+          [
+            -43.88673576941857,
+            67.59459028139219
+          ]
+        ]
+      },
+      "properties": {
+        "from": 189,
+        "to": 895,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -49.355517709492055,
+            131.23581619767953
+          ],
+          [
+            101.32519761906114,
+            68.71553611755371
+          ]
+        ]
+      },
+      "properties": {
+        "from": 468,
+        "to": 664,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -49.355517709492055,
+            131.23581619767953
+          ],
+          [
+            -105.39862368522434,
+            20.890049663705565
+          ]
+        ]
+      },
+      "properties": {
+        "from": 468,
+        "to": 719,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -49.355517709492055,
+            131.23581619767953
+          ],
+          [
+            -43.88673576941857,
+            67.59459028139219
+          ]
+        ]
+      },
+      "properties": {
+        "from": 468,
+        "to": 895,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            100.65061370186184,
+            20.398805488840395
+          ],
+          [
+            101.32519761906114,
+            68.71553611755371
+          ]
+        ]
+      },
+      "properties": {
+        "from": 532,
+        "to": 664,
+        "bidirectional": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            100.65061370186184,
+            20.398805488840395
+          ],
+          [
+            41.46647555033366,
+            24.28104387919108
+          ]
+        ]
+      },
+      "properties": {
+        "from": 532,
+        "to": 841,
+        "bidirectional": true
+      }
+    }
+  ]
+}

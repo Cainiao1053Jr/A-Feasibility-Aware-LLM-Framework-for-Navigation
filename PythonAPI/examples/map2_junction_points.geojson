@@ -1,0 +1,439 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.20562982559204,
+          60.21753787994385
+        ]
+      },
+      "properties": {
+        "junction_id": 1427,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.70042986188616,
+          -134.97090225219728
+        ]
+      },
+      "properties": {
+        "junction_id": 356,
+        "z": 8.000974757330757
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.61521244049072,
+          64.44874147574107
+        ]
+      },
+      "properties": {
+        "junction_id": 1038,
+        "z": 0.036154652156255906
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.60241165161133,
+          6.71306256884709
+        ]
+      },
+      "properties": {
+        "junction_id": 861,
+        "z": 0.0010392001022609064
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.230543312479238,
+          167.14881896972656
+        ]
+      },
+      "properties": {
+        "junction_id": 1019,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -49.946039496527774,
+          196.22237430148655
+        ]
+      },
+      "properties": {
+        "junction_id": 1932,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          235.32333055183068,
+          2.0826194548784795
+        ]
+      },
+      "properties": {
+        "junction_id": 1135,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -144.01512471640982,
+          57.39648539845536
+        ]
+      },
+      "properties": {
+        "junction_id": 1901,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.89750017438615,
+          -73.33842450096493
+        ]
+      },
+      "properties": {
+        "junction_id": 1441,
+        "z": 7.954931066149757
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.56919792516908,
+          -133.78840853562997
+        ]
+      },
+      "properties": {
+        "junction_id": 1696,
+        "z": 7.983238262916679
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.90990274063664,
+          -138.19995595507052
+        ]
+      },
+      "properties": {
+        "junction_id": 730,
+        "z": 0.014860974800224214
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.4818427853468,
+          -1.6462010116111943
+        ]
+      },
+      "properties": {
+        "junction_id": 1168,
+        "z": 0.015782083167567445
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -144.14285685221355,
+          -1.65236900250117
+        ]
+      },
+      "properties": {
+        "junction_id": 1820,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.91068827311198,
+          -0.7645930369695028
+        ]
+      },
+      "properties": {
+        "junction_id": 1191,
+        "z": -0.008718527636180322
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1233689091098842,
+          196.59051775576464
+        ]
+      },
+      "properties": {
+        "junction_id": 82,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.659917958577473,
+          8.23964691956838
+        ]
+      },
+      "properties": {
+        "junction_id": 1205,
+        "z": -0.00045791380398441106
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.48516281791355,
+          -1.8605837614639946
+        ]
+      },
+      "properties": {
+        "junction_id": 475,
+        "z": 0.11440479242499324
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.39421303979063455,
+          133.00102578222223
+        ]
+      },
+      "properties": {
+        "junction_id": 103,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1106007353643355,
+          -136.1936465488391
+        ]
+      },
+      "properties": {
+        "junction_id": 1221,
+        "z": -0.0022407728472163407
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.29785753250123,
+          133.80552997589112
+        ]
+      },
+      "properties": {
+        "junction_id": 238,
+        "z": 0.007142976175742772
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.5581074846096525,
+          -198.1746141482622
+        ]
+      },
+      "properties": {
+        "junction_id": 655,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.863975667036495,
+          -10.470647855446888
+        ]
+      },
+      "properties": {
+        "junction_id": 1469,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1809585373123,
+          -195.87198133592483
+        ]
+      },
+      "properties": {
+        "junction_id": 498,
+        "z": 0.001596709256749842
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          232.08103637695314,
+          60.97031471729279
+        ]
+      },
+      "properties": {
+        "junction_id": 1352,
+        "z": 0.010526737817514231
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.07827455703526,
+          -196.05079546366653
+        ]
+      },
+      "properties": {
+        "junction_id": 576,
+        "z": -0.013815031753301187
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -147.25278958407316,
+          102.68056973544034
+        ]
+      },
+      "properties": {
+        "junction_id": 1669,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.79182125273205,
+          -75.28191811697823
+        ]
+      },
+      "properties": {
+        "junction_id": 1794,
+        "z": 8.006494635627384
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4709799247793853,
+          28.117998331785202
+        ]
+      },
+      "properties": {
+        "junction_id": 1736,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.648336787802586,
+          -14.294865924487079
+        ]
+      },
+      "properties": {
+        "junction_id": 1082,
+        "z": -0.00048174886530656636
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.83006783326467,
+          19.541725556055706
+        ]
+      },
+      "properties": {
+        "junction_id": 1654,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.47442718914576937,
+          -38.24376242501395
+        ]
+      },
+      "properties": {
+        "junction_id": 1682,
+        "z": 0.0
+      }
+    }
+  ]
+}

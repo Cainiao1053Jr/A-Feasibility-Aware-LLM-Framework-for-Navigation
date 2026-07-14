@@ -1,0 +1,8 @@
+Task            : llm_unified_tour
+Timestamp       : 2026-06-08_07-44-25
+Iterations      : 3
+Avg LLM Time(s) : 7.33
+Path1 Length(m) : 2250.5
+Path2 Length(m) : 3049.6
+Avg Path Len(m) : 2650.1
+Collision Det.  : False

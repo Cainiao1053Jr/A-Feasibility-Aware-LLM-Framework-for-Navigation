@@ -1,0 +1,8 @@
+Task            : llm_multi_tour
+Timestamp       : 2026-06-08_17-55-08
+Iterations      : 6
+Avg LLM Time(s) : 8.78
+Path1 Length(m) : 2729.6
+Path2 Length(m) : 1924.2
+Avg Path Len(m) : 2326.9
+Collision Det.  : True

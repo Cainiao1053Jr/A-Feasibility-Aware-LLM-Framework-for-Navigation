@@ -1,0 +1,5 @@
+#define system
+{{{main}}}
+
+#define user
+This car has a collision. The car is a sports car. Please analyze the potential damage from collision with the impact force given, the unit for collision is given as N.

@@ -1,0 +1,9 @@
+#define system
+{{{main}}}
+
+#define user
+Navigate the car from the current position to destination following the map. The path must start from current position and stop at destination and
+only have the points from the map. Also, you should avoid passing by some points given in the text. Generate few via points required including start and destination for each route, the rest of the points will be automatically filled by local planner. Output 3 possible paths with probability of accessibility, put each of the point list in executable python array in the format of anchors_index = [carla.Location(10.0, -25.0, 0.0) ,carla.Location(50.0, -65.0, 0.0)], index is a number from 1 to 3 that labels the paths. An example for output path is anchors_2 = [carla.Location(10.0, -25.0, 0.0) ,carla.Location(50.0, -65.0, 0.0)], you should output 3 paths index from 1 to 3. All locations have positive and negative definition, you should take it exactly as given.
+The definition of orientation has pole to positive X axis and rotate to Y axis.
+Take accessibility into consideration, place points with higher number forks with priority.
+Following are start position, destination, start orientation and map points.
