@@ -1,6 +1,8 @@
 # A-Feasibility-Aware-LLM-Framework-for-Navigation
 To use the code, download Carla UE4 at https://carla.readthedocs.io/en/latest/download/
 
+The code in this repository contains some python examples and utils provided by Carla which is under MIT license, credit to their excellent work
+
 Then replace PythonAPI folder with the contents in the repository
 
 #
