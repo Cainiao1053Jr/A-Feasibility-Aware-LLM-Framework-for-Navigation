@@ -1,0 +1,61 @@
+=== Multi-Agent Session Log ===
+Started: 2026-05-25 09:04:48
+
+[09:04:48.809][drone_1] ── Turn 1 ──────────────────────────────────────
+[09:04:48.810][drone_2] ── Turn 1 ──────────────────────────────────────
+[09:04:52.226][drone_1] LLM Response:
+
+[09:04:52.227][drone_1] Tool Call: send_message  args={"to":"drone_2","content":"drone_1 draft path proposal at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance. Please share your draft path and confirm whether any segment comes within 0.5m of mine so we can negotiate if needed."}
+[09:04:52.227][drone_2] LLM Response:
+
+[09:04:52.229][drone_2] Tool Call: send_message  args={"to":"drone_1","content":"drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please check against your planned path and let me know if any conflict (<0.5m separation) occurs."}
+[09:04:52.229][Router] drone_1 → drone_2:
+drone_1 draft path proposal at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance. Please share your draft path and confirm whether any segment comes within 0.5m of mine so we can negotiate if needed.
+[09:04:52.229][Router] drone_2 → drone_1:
+drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please check against your planned path and let me know if any conflict (<0.5m separation) occurs.
+[09:04:52.229][drone_1] Tool Result: {"status": "ok", "to": "drone_2"}
+[09:04:52.229][drone_2] Tool Result: {"status": "ok", "to": "drone_1"}
+[09:04:52.229][drone_1] Inbox ← drone_2:
+drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please check against your planned path and let me know if any conflict (<0.5m separation) occurs.
+[09:04:52.230][drone_2] Inbox ← drone_1:
+drone_1 draft path proposal at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance. Please share your draft path and confirm whether any segment comes within 0.5m of mine so we can negotiate if needed.
+[09:04:52.230][drone_2] ── Turn 2 ──────────────────────────────────────
+[09:04:52.230][drone_1] ── Turn 2 ──────────────────────────────────────
+[09:04:55.363][drone_1] LLM Response:
+
+[09:04:55.363][drone_1] Tool Call: send_message  args={"to":"drone_2","content":"Conflict detected with my draft path: both paths use the segment ending at/including y=1.000, and we coincide at (1.000,1.000,0.300) / overlap along top edge, so separation <0.5m. I will keep a left-then-top route if possible. Please revise to avoid the top edge y=1.000 and stay at least 0.5m from my path [(0,0)->(0,1)->(1,1)] at z=0.300. Suggest routing through lower/right interior instead."}
+[09:04:55.363][Router] drone_1 → drone_2:
+Conflict detected with my draft path: both paths use the segment ending at/including y=1.000, and we coincide at (1.000,1.000,0.300) / overlap along top edge, so separation <0.5m. I will keep a left-then-top route if possible. Please revise to avoid the top edge y=1.000 and stay at least 0.5m from my path [(0,0)->(0,1)->(1,1)] at z=0.300. Suggest routing through lower/right interior instead.
+[09:04:55.363][drone_1] Tool Result: {"status": "ok", "to": "drone_2"}
+[09:04:55.363][drone_1] ── Turn 3 ──────────────────────────────────────
+[09:04:56.430][drone_1] LLM Response:
+path = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]
+[09:04:56.431][drone_1] Finalization blocked:
+Waiting for the other drone to submit its final path. Please re-confirm and re-output your final path:
+  path = [(x1,y1,z), ..., (xn,yn,z)]
+[09:04:56.432][drone_1] ── Turn 4 ──────────────────────────────────────
+[09:04:56.816][drone_2] LLM Response:
+
+[09:04:56.816][drone_2] Tool Call: send_message  args={"to":"drone_1","content":"I checked our drafts. My path [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)] conflicts with yours: our top horizontal/vertical segments meet at (1.000,1.000) and overlap/approach within <0.5m near y=1 and x=1. I will reroute. Proposed revised path: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays at least 0.6m from your x=0 and y=1 corridor except at my endpoint (0,1), where your draft also passes. Since your path includes my destination exactly, please adjust your route so you do not occupy (0.000,1.000,0.300)."}
+[09:04:56.817][Router] drone_2 → drone_1:
+I checked our drafts. My path [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)] conflicts with yours: our top horizontal/vertical segments meet at (1.000,1.000) and overlap/approach within <0.5m near y=1 and x=1. I will reroute. Proposed revised path: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays at least 0.6m from your x=0 and y=1 corridor except at my endpoint (0,1), where your draft also passes. Since your path includes my destination exactly, please adjust your route so you do not occupy (0.000,1.000,0.300).
+[09:04:56.817][drone_2] Tool Result: {"status": "ok", "to": "drone_1"}
+[09:04:56.817][drone_2] Inbox ← drone_1:
+Conflict detected with my draft path: both paths use the segment ending at/including y=1.000, and we coincide at (1.000,1.000,0.300) / overlap along top edge, so separation <0.5m. I will keep a left-then-top route if possible. Please revise to avoid the top edge y=1.000 and stay at least 0.5m from my path [(0,0)->(0,1)->(1,1)] at z=0.300. Suggest routing through lower/right interior instead.
+[09:04:56.817][drone_2] ── Turn 3 ──────────────────────────────────────
+[09:04:58.199][drone_1] LLM Response:
+path = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]
+[09:04:58.199][drone_1] Finalization blocked:
+Waiting for the other drone to submit its final path. Please re-confirm and re-output your final path:
+  path = [(x1,y1,z), ..., (xn,yn,z)]
+[09:04:58.199][drone_1] Inbox ← drone_2:
+I checked our drafts. My path [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)] conflicts with yours: our top horizontal/vertical segments meet at (1.000,1.000) and overlap/approach within <0.5m near y=1 and x=1. I will reroute. Proposed revised path: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays at least 0.6m from your x=0 and y=1 corridor except at my endpoint (0,1), where your draft also passes. Since your path includes my destination exactly, please adjust your route so you do not occupy (0.000,1.000,0.300).
+[09:04:58.200][drone_1] ── Turn 5 ──────────────────────────────────────
+[09:04:58.611][drone_2] LLM Response:
+path = [(1.000,0.000,0.300), (1.000,-0.600,0.300), (-0.600,-0.600,0.300), (-0.600,1.000,0.300), (0.000,1.000,0.300)]
+[09:04:58.613][drone_2] Final Answer:
+path = [(1.000,0.000,0.300), (1.000,-0.600,0.300), (-0.600,-0.600,0.300), (-0.600,1.000,0.300), (0.000,1.000,0.300)]
+[09:05:08.298][drone_1] LLM Response:
+path = [(0.000,0.000,0.300), (1.000,0.000,0.300), (1.000,1.000,0.300)]
+[09:05:08.298][drone_1] Final Answer:
+path = [(0.000,0.000,0.300), (1.000,0.000,0.300), (1.000,1.000,0.300)]

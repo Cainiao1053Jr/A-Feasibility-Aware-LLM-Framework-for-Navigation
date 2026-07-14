@@ -1,0 +1,53 @@
+=== Multi-Agent Session Log ===
+Started: 2026-05-24 16:23:00
+
+[16:23:00.519][drone_1] ── Turn 1 ──────────────────────────────────────
+[16:23:00.520][drone_2] ── Turn 1 ──────────────────────────────────────
+[16:23:03.120][drone_1] LLM Response:
+
+[16:23:03.120][drone_1] Tool Call: send_message  args={"to":"drone_2","content":"drone_1 draft path at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance in xy. Please check against your planned path and let me know if any conflict or if you need me to adjust to maintain >=0.5m separation."}
+[16:23:03.122][Router] drone_1 → drone_2:
+drone_1 draft path at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance in xy. Please check against your planned path and let me know if any conflict or if you need me to adjust to maintain >=0.5m separation.
+[16:23:03.122][drone_1] Tool Result: {"status": "ok", "to": "drone_2"}
+[16:23:03.122][drone_1] ── Turn 2 ──────────────────────────────────────
+[16:23:03.584][drone_2] LLM Response:
+
+[16:23:03.584][drone_2] Tool Call: send_message  args={"to":"drone_1","content":"drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please share your draft path and confirm whether any conflict (<0.5m separation) exists."}
+[16:23:03.584][Router] drone_2 → drone_1:
+drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please share your draft path and confirm whether any conflict (<0.5m separation) exists.
+[16:23:03.585][drone_2] Tool Result: {"status": "ok", "to": "drone_1"}
+[16:23:03.585][drone_2] Inbox ← drone_1:
+drone_1 draft path at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. This avoids obstacles with >0.1m clearance in xy. Please check against your planned path and let me know if any conflict or if you need me to adjust to maintain >=0.5m separation.
+[16:23:03.585][drone_2] ── Turn 2 ──────────────────────────────────────
+[16:23:04.332][drone_1] LLM Response:
+path = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]
+[16:23:04.333][drone_1] Finalization blocked:
+Waiting for the other drone to submit its final path. Please re-confirm and re-output your final path:
+  path = [(x1,y1,z), ..., (xn,yn,z)]
+[16:23:04.333][drone_1] Inbox ← drone_2:
+drone_2 draft path proposal at z=0.300: [(1.000,0.000,0.300),(1.000,1.000,0.300),(0.000,1.000,0.300)]. This avoids my obstacles with >0.1m clearance. Please share your draft path and confirm whether any conflict (<0.5m separation) exists.
+[16:23:04.333][drone_1] ── Turn 3 ──────────────────────────────────────
+[16:23:07.475][drone_2] LLM Response:
+
+[16:23:07.475][drone_2] Tool Call: send_message  args={"to":"drone_1","content":"Checked. Your path conflicts with my draft because both use y=1.000 and meet at/near (0.000,1.000); separation would drop below 0.5m. I can adjust instead. Proposed final for drone_2: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays >0.1m from obstacles and keeps >=0.6m from your x=0 and y=1 segments except at my endpoint. Please confirm acceptance; assuming asynchronous timing, endpoint coincidence should still be avoided by your path finishing at (1,1), but my route remains spatially separated from your segments by >=0.6m before destination."}
+[16:23:07.475][Router] drone_2 → drone_1:
+Checked. Your path conflicts with my draft because both use y=1.000 and meet at/near (0.000,1.000); separation would drop below 0.5m. I can adjust instead. Proposed final for drone_2: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays >0.1m from obstacles and keeps >=0.6m from your x=0 and y=1 segments except at my endpoint. Please confirm acceptance; assuming asynchronous timing, endpoint coincidence should still be avoided by your path finishing at (1,1), but my route remains spatially separated from your segments by >=0.6m before destination.
+[16:23:07.475][drone_2] Tool Result: {"status": "ok", "to": "drone_1"}
+[16:23:07.475][drone_2] ── Turn 3 ──────────────────────────────────────
+[16:23:08.070][drone_1] LLM Response:
+
+[16:23:08.070][drone_1] Tool Call: send_message  args={"to":"drone_2","content":"Re-confirming drone_1 path at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. Comparing paths: we both use the top edge y=1.000 and both include waypoint (1.000,1.000,0.300), so separation is 0 there and <0.5m along overlapping portions. Conflict exists. I propose I keep my path and you reroute to avoid y=1.000 near my route, e.g. [(1.000,0.000,0.300),(1.000,0.400,0.300),(0.600,0.400,0.300),(0.600,1.000,0.300),(0.000,1.000,0.300)] only if obstacle-clear for you; otherwise please propose an alternative that stays >=0.5m from my path."}
+[16:23:08.071][Router] drone_1 → drone_2:
+Re-confirming drone_1 path at z=0.300: [(0.000,0.000,0.300),(0.000,1.000,0.300),(1.000,1.000,0.300)]. Comparing paths: we both use the top edge y=1.000 and both include waypoint (1.000,1.000,0.300), so separation is 0 there and <0.5m along overlapping portions. Conflict exists. I propose I keep my path and you reroute to avoid y=1.000 near my route, e.g. [(1.000,0.000,0.300),(1.000,0.400,0.300),(0.600,0.400,0.300),(0.600,1.000,0.300),(0.000,1.000,0.300)] only if obstacle-clear for you; otherwise please propose an alternative that stays >=0.5m from my path.
+[16:23:08.071][drone_1] Tool Result: {"status": "ok", "to": "drone_2"}
+[16:23:08.071][drone_1] Inbox ← drone_2:
+Checked. Your path conflicts with my draft because both use y=1.000 and meet at/near (0.000,1.000); separation would drop below 0.5m. I can adjust instead. Proposed final for drone_2: [(1.000,0.000,0.300),(1.000,-0.600,0.300),(-0.600,-0.600,0.300),(-0.600,1.000,0.300),(0.000,1.000,0.300)]. This stays >0.1m from obstacles and keeps >=0.6m from your x=0 and y=1 segments except at my endpoint. Please confirm acceptance; assuming asynchronous timing, endpoint coincidence should still be avoided by your path finishing at (1,1), but my route remains spatially separated from your segments by >=0.6m before destination.
+[16:23:08.071][drone_1] ── Turn 4 ──────────────────────────────────────
+[16:23:08.632][drone_2] LLM Response:
+path = [(1.000,0.000,0.300), (1.000,-0.600,0.300), (-0.600,-0.600,0.300), (-0.600,1.000,0.300), (0.000,1.000,0.300)]
+[16:23:08.634][drone_2] Final Answer:
+path = [(1.000,0.000,0.300), (1.000,-0.600,0.300), (-0.600,-0.600,0.300), (-0.600,1.000,0.300), (0.000,1.000,0.300)]
+[16:23:09.149][drone_1] LLM Response:
+path = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]
+[16:23:09.149][drone_1] Final Answer:
+path = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]

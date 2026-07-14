@@ -1,0 +1,44 @@
+=== Single LLM Planning Log ===
+Time: 2026-05-24 16:26:59
+Elapsed: 2.17s
+
+=== Request ===
+
+[SYSTEM]
+You are a multi-drone path planner operating in a 2D horizontal plane (units: meters).
+Both drones fly at the SAME FIXED altitude — the z coordinate NEVER changes.
+Plan collision-free paths for BOTH drones simultaneously.
+Each drone must avoid all obstacles AND avoid getting within 0.3m of the other drone.
+
+Output EXACTLY two lines in this format (no extra explanation needed, but brief reasoning is fine):
+  path_1 = [(x1,y1,0.300), (x2,y2,0.300), ...]
+  path_2 = [(x1,y1,0.300), (x2,y2,0.300), ...]
+
+Rules:
+  - Every waypoint MUST have z = fixed altitude (do NOT change z).
+  - The last waypoint of each path must equal its destination exactly.
+  - Keep at least 0.1m clearance from every obstacle in the XY plane.
+  - The two drone paths must not come within 0.3m of each other at any point.
+  - Use the minimum number of waypoints necessary.
+
+[USER]
+Drone 1 (drone_1):
+  Current position: (0.000, 0.000, 0.300)
+  Destination:      (1.000, 1.000, 0.300)
+
+Drone 2 (drone_2):
+  Current position: (1.000, 0.000, 0.300)
+  Destination:      (0.000, 1.000, 0.300)
+
+Fixed flight altitude (z): 0.300 m
+
+Obstacles (sphere: center_x, center_y, center_z, radius_m):
+  [0] center=(0.500, 0.250, 0.300), radius=0.080m
+  [1] center=(0.300, 0.700, 0.300), radius=0.060m
+
+Plan collision-free paths for both drones. Output path_1 for drone_1 and path_2 for drone_2.
+
+=== LLM Response ===
+
+path_1 = [(0.000,0.000,0.300), (0.000,1.000,0.300), (1.000,1.000,0.300)]
+path_2 = [(1.000,0.000,0.300), (1.000,-0.400,0.300), (-0.400,-0.400,0.300), (-0.400,1.000,0.300), (0.000,1.000,0.300)]
